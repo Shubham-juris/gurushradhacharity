@@ -1,7 +1,7 @@
 // src/components/CharityCard.jsx
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -34,27 +34,28 @@ const CharityCard = ({ charity }) => {
       initial={{ scale: 0.95 }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: 'spring', stiffness: 300 }}
-      className="relative bg-cover bg-center rounded-lg overflow-hidden group transition-all duration-300 shadow-md hover:shadow-none"
+      className="relative rounded-xl overflow-hidden group shadow-md hover:shadow-lg transition duration-300 w-full sm:w-[90%] md:w-[80%] lg:w-[360px] aspect-[4/3] mx-auto"
       style={{
         backgroundImage: `url(${charity.image})`,
-        height: '300px',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 transition duration-300 group-hover:bg-opacity-70 z-10" />
+      <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-300 z-10" />
 
-      {/* Sliding Text Content on Hover */}
+      {/* Sliding Text Content */}
       <motion.div
         initial={{ y: 60, opacity: 0 }}
         whileHover={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="absolute bottom-6 left-6 right-6 text-white z-20 group-hover:flex hidden flex-col text-center"
+        transition={{ duration: 0.4 }}
+        className="absolute inset-6 text-white z-20 group-hover:flex hidden flex-col items-center text-center"
       >
-        <h3 className="text-xl font-bold">{charity.name}</h3>
-        <p className="text-sm mt-2">{charity.description}</p>
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{charity.name}</h3>
+        <p className="text-xs sm:text-sm mt-2 leading-snug">{charity.description}</p>
         <Link
           to={`/donate/${charity.id}`}
-          className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
+          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base px-4 py-2 rounded-full transition"
         >
           Donate Now
         </Link>

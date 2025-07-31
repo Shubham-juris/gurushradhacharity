@@ -44,23 +44,24 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-20 bg-white">
-      <div className="text-center max-w-4xl mx-auto pt-20">
+    <div className="bg-white px-4 sm:px-6 lg:px-20 py-16">
+      <div className="text-center max-w-4xl mx-auto mb-12">
         <h1
           ref={headingRef}
-          className="text-4xl sm:text-5xl font-extrabold text-blue-600 mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 mb-4"
         >
           About Us
         </h1>
         <p
           ref={paragraphRef}
-          className="text-lg sm:text-xl text-gray-700 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed"
         >
           Our mission at <span className="font-semibold text-blue-700">GuruShradha Charity</span> is to create lasting impact in the lives of those who need it most. We support initiatives that provide food for the homeless, clean water for communities, and education for underprivileged children. Every donation you make fuels real change.
         </p>
       </div>
-      <Animation/>
-      <DonationPanel/>
+
+      <Animation />
+      <DonationPanel />
     </div>
   );
 };

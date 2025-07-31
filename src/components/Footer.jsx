@@ -1,19 +1,14 @@
 import React from "react";
-import goods from "../assets/goods.jpg";
-import education from "../assets/logo/education.jpg";
-import child from "../assets/child.jpg";
 import fb from "../assets/logo/fb.avif";
 import insta from "../assets/logo/insta.jpg";
 import twitter from "../assets/logo/x.jpg";
 import youtube from "../assets/logo/youtube.avif";
-const Footer = () => {
 
-  
+const Footer = () => {
   return (
     <footer className="bg-blue-600 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between">
-
-        {/* Section 1: Logo and Description */}
+        {/* Logo & Description */}
         <div className="flex-1 min-w-[250px]">
           <h2 className="text-2xl font-bold mb-4">CHARITI</h2>
           <p className="text-sm text-gray-300 mb-4">
@@ -23,43 +18,17 @@ const Footer = () => {
           <div>
             <h4 className="text-md font-semibold mb-2">Social Media Handles</h4>
             <div className="flex gap-4 flex-wrap items-center">
-              <div className="flex flex-col items-center">
-                <img
-                  src={fb}
-                  alt="Facebook"
-                  className="w-10 h-10 rounded-full shadow-lg object-cover"
-                />
-                <span className="text-xs mt-1">Facebook</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img
-                  src={insta}
-                  alt="Instagram"
-                  className="w-10 h-10 rounded-full shadow-lg object-cover"
-                />
-                <span className="text-xs mt-1">Instagram</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img
-                  src={twitter}
-                  alt="Twitter"
-                  className="w-10 h-10 rounded-full shadow-lg object-cover"
-                />
-                <span className="text-xs mt-1">Twitter</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img
-                  src={youtube}
-                  alt="YouTube"
-                  className="w-10 h-10 rounded-full shadow-lg object-cover"
-                />
-                <span className="text-xs mt-1">YouTube</span>
-              </div>
+              {[{ img: fb, label: "Facebook" }, { img: insta, label: "Instagram" }, { img: twitter, label: "Twitter" }, { img: youtube, label: "YouTube" }].map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center">
+                  <img src={item.img} alt={item.label} className="w-10 h-10 rounded-full shadow-lg object-cover" />
+                  <span className="text-xs mt-1">{item.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Section 2: Contact Info */}
+        {/* Contact Info */}
         <div className="flex-1 min-w-[250px]">
           <h3 className="text-lg font-semibold uppercase mb-4">Contact Information</h3>
           <p className="text-sm text-gray-300 mb-2">
@@ -72,29 +41,25 @@ const Footer = () => {
           <p className="text-sm text-gray-300">📧 contact@Chariti.theme</p>
         </div>
 
-        {/* Section 3: Quick Links */}
+        {/* Quick Links */}
         <div className="flex-1 min-w-[200px] text-center">
           <h3 className="text-lg font-semibold uppercase mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-gray-300 ">
-            <li className="hover:text-white cursor-pointer text-base font-semibold">
-              <a href="/">Home</a>
-            </li>
-            <li className="hover:text-white cursor-pointer text-base font-semibold">
-              <a href="/about">About Us</a>
-            </li>
-            <li className="hover:text-white cursor-pointer text-base font-semibold">
-              <a href="/couses">Couses</a>
-            </li>
-            <li className="hover:text-white cursor-pointer text-base font-semibold">
-              <a href="/contact">Contact</a>
-            </li>
-            <li className="hover:text-white cursor-pointer text-base font-semibold">
-              <a href="/faq">FAQ</a>
-            </li>
+          <ul className="space-y-2 text-sm text-gray-300">
+            {[
+              { label: "Home", href: "/" },
+              { label: "About Us", href: "/about" },
+              { label: "Courses", href: "/courses" },
+              { label: "Contact", href: "/contact" },
+              { label: "FAQ", href: "/faq" },
+            ].map((link, index) => (
+              <li key={index} className="hover:text-white cursor-pointer text-base font-semibold">
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
           </ul>
         </div>
 
-        
+        {/* Map Embed */}
         <div className="flex-1 min-w-[250px]">
           <h3 className="text-lg font-semibold uppercase mb-4">Our Location</h3>
           <div className="w-full h-40 rounded overflow-hidden">
@@ -104,16 +69,12 @@ const Footer = () => {
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
-          
-
-          
-
       </div>
     </footer>
   );

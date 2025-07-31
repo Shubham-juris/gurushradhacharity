@@ -46,53 +46,52 @@ const blogPosts = [
 const Couses = () => {
   return (
     <>
-    {/* Banner Image with Heading */}
-      <div className="w-full relative">
+      {/* Banner Section */}
+      <div className="relative w-full">
         <img
           src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80"
           alt="Charity Banner"
-          className="w-full h-56 sm:h-72 md:h-96 object-cover shadow-lg"
-          style={{ objectPosition: "center" }}
+          className="w-full h-56 sm:h-72 md:h-96 object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-center mt-12  text-3xl sm:text-5xl font-extrabold bg-black bg-opacity-40 px-6 py-2 rounded">
-            Welcome to <span className="text-blue-600"> Guru Charity</span> <br/> Foundation
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold text-center px-4">
+            Welcome to <span className="text-blue-500">Guru Charity</span> <br />
+            Foundation
           </h1>
         </div>
       </div>
-    
-    <div className="min-h-screen bg-blue-600 py-12 px-4 sm:px-6 lg:px-20 ">
-      
 
-      <header className="max-w-7xl mx-auto text-center mb-12 mt-8">
-        <h1 className="text-white text-4xl sm:text-5xl font-extrabold mb-4">
-          Guru Charity Foundation Couses
-        </h1>
-        <p className="text-blue-200 max-w-3xl mx-auto text-lg sm:text-xl">
-          Stories and updates from our mission to empower communities and change lives.
-        </p>
-      </header>
+      {/* Blog/Courses Section */}
+      <section className="bg-blue-600 py-12 px-4 sm:px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto text-center mb-10">
+          <h2 className="text-white text-3xl sm:text-4xl font-bold mb-4">
+            Guru Charity Foundation Courses
+          </h2>
+          <p className="text-blue-200 text-sm sm:text-lg max-w-2xl mx-auto">
+            Stories and updates from our mission to empower communities and change lives.
+          </p>
+        </div>
 
-      <main className="max-w-7xl mx-auto">
-        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Course Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {blogPosts.map(({ id, title, date, excerpt, image, link }) => (
             <article
               key={id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-lg transition"
             >
               <img
                 src={image}
                 alt={title}
-                className="h-48 w-full object-cover"
+                className="w-full h-44 sm:h-48 object-cover"
                 loading="lazy"
               />
-              <div className="p-6 flex flex-col flex-grow">
-                <time className="text-sm text-blue-600 mb-2">{date}</time>
-                <h2 className="text-xl font-semibold text-blue-900 mb-3">{title}</h2>
-                <p className="text-blue-800 flex-grow">{excerpt}</p>
+              <div className="p-5 flex flex-col flex-grow">
+                <time className="text-sm text-blue-600 mb-1">{date}</time>
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">{title}</h3>
+                <p className="text-blue-800 text-sm flex-grow">{excerpt}</p>
                 <a
                   href={link}
-                  className="mt-6 inline-block text-blue-600 font-bold hover:text-blue-800 transition"
+                  className="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition"
                   aria-label={`Read more about ${title}`}
                 >
                   Read More →
@@ -101,8 +100,7 @@ const Couses = () => {
             </article>
           ))}
         </div>
-      </main>
-    </div>
+      </section>
     </>
   );
 };

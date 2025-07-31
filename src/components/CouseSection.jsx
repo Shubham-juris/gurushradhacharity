@@ -82,63 +82,93 @@ export default function CausesSlider() {
   }, [currentIndex]);
 
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-20 mb-20 py-10 font-sans relative overflow-hidden">
+    <div className="bg-white px-4 sm:px-6 lg:px-20 mb-20 font-sans relative overflow-hidden">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
           Our <span className="text-blue-600">Causes</span>
         </h2>
       </div>
 
-      {/* Slides */}
-      <div className="relative w-full h-[32rem] hidden lg:flex">
+      {/* Desktop Slides */}
+      <div className="hidden lg:flex relative w-full h-[36rem] transition-all duration-500">
         {causes.map((cause, index) => (
           <div
             key={index}
-            className={`absolute top-0 h-80  left-1/2 transform -translate-x-1/2 w-11/12  flex flex-col md:flex-row rounded-lg overflow-hidden shadow-lg transition-opacity duration-1000 ${
+            className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-11/12 flex flex-col md:flex-row rounded-lg overflow-hidden shadow-lg transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            {/* Text Content */}
-            <div className=" p-16 bg-blue-600 text-white md:w-1/2  w-full rounded-lg flex flex-col justify-center">
+            {/* Text */}
+            <div className="p-10 bg-blue-600 text-white md:w-1/2 w-full flex flex-col justify-center rounded-lg space-y-4">
               <h3
                 ref={index === currentIndex ? headingRef : null}
-                className="text-2xl sm:text-3xl font-bold mb-4"
+                className="text-2xl md:text-3xl font-bold"
               >
                 {cause.title}
               </h3>
 
-              <div className="w-full h-2 bg-white rounded-full overflow-hidden mb-4">
+              <div className="w-full h-2 bg-white rounded-full overflow-hidden">
                 <div className="h-full bg-white w-full animate-pulse"></div>
               </div>
 
               <p
                 ref={index === currentIndex ? paragraphRef : null}
-                className="text-base sm:text-lg leading-relaxed mb-6"
+                className="text-base md:text-lg leading-relaxed"
               >
                 {cause.description}
               </p>
-            <Link to="/contact">
-              <button className="bg-rose-500 text-white px-6 py-3 font-bold rounded hover:bg-rose-600 transition">
-                Contact Us
-              </button>
+              <Link to="/contact">
+                <button className="bg-rose-500 text-white px-6 py-3 font-semibold rounded hover:bg-rose-600 transition">
+                  Contact Us
+                </button>
               </Link>
             </div>
 
             {/* Image */}
-            <div className="relative md:w-1/2 w-full h-80 md:h-auto">
+            <div className="md:w-1/2 w-full h-64 md:h-auto relative">
               <img
                 src={cause.image}
                 alt="Cause"
                 className="w-full h-full object-cover"
               />
+              {/* Play Button Icon */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 border-2 border-white rounded-full flex items-center justify-center bg-white/20">
+                <div className="w-20 h-20 border-2 border-white rounded-full flex items-center justify-center bg-white/30">
                   <div className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
                     <div className="w-0 h-0 border-t-4 border-b-4 border-l-6 border-t-transparent border-b-transparent border-l-white ml-1"></div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile / Tablet View (Stacked) */}
+      <div className="flex lg:hidden flex-col space-y-12">
+        {causes.map((cause, index) => (
+          <div
+            key={index}
+            className="w-full rounded-xl shadow-lg overflow-hidden bg-white"
+          >
+            <img
+              src={cause.image}
+              alt={cause.title}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-6 text-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3">
+                {cause.title}
+              </h3>
+              <p className="text-sm sm:text-base leading-relaxed mb-4">
+                {cause.description}
+              </p>
+              <Link to="/contact">
+                <button className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition text-sm sm:text-base">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         ))}

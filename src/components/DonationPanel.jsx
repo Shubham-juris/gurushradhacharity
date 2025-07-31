@@ -1,6 +1,5 @@
 import React from "react";
-import qgivLogo from "../assets/logo/logo.jpg"; 
-import panelImage from "../assets/Help.png"; // Replace with your custom panel image
+import panelImage from "../assets/homeless.jpg"; 
 
 const DonationPanel = () => {
 const [flipped, setFlipped] = React.useState(false);

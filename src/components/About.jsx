@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import Animated from '../assets/logo/banner.avif';
+import Animated from '../assets/homeless.jpg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -48,7 +48,7 @@ const Animation = () => {
         
         {/* Responsive Image */}
         <div className="w-full lg:w-1/2">
-          <div className="relative w-full aspect-w-16 aspect-h-9">
+          <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
             <img
               src={Animated}
               alt="Empowerment"

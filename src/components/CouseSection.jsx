@@ -82,7 +82,7 @@ export default function CausesSlider() {
   }, [currentIndex]);
 
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-20 mb-20 font-sans relative overflow-hidden">
+    <div className="bg-white px-4 sm:px-6 lg:px-20  font-sans relative overflow-hidden">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">

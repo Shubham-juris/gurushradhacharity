@@ -56,10 +56,13 @@ ${formData.message}`
               Get in Touch with GuruShradha Charity
             </h3>
             <p className="mt-4 text-sm sm:text-base text-gray-700">
-              We’d love to hear from you! Whether you have a question about our work, want to
-              get involved, or just want to say hello — fill out the form and we’ll get back to
-              you as soon as possible.
-            </p>
+             We’d love to hear from you! Whether you have a question about our mission, want to collaborate, need more details about our initiatives, or simply want to say hello — we’re here for it.
+
+Our team is always ready to connect with compassionate individuals and organizations looking to make a real difference. Whether you're a donor, volunteer, or advocate, your voice matters. Fill out the form below, and we’ll respond as quickly as possible.
+
+Together, let’s build a future filled with kindness, dignity, and opportunity for all.
+
+</p>
           </div>
 
           {/* Form */}

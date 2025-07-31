@@ -1,5 +1,5 @@
 import React from "react";
-import panelImage from "../assets/homeless.jpg";
+import panelImage from "../assets/child.jpg";
 
 const DonationPanel = () => {
   const [flipped, setFlipped] = React.useState(false);
@@ -72,7 +72,7 @@ const DonationPanel = () => {
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-snug">
                   Their Future{" "}
                   <span className="text-gray-900">Starts With</span>{" "}
-                  <span className="bg-yellow-300 px-2 rounded">Your Trust</span>
+                  <span className="bg-white text-blue-600 px-2 rounded">Your Trust</span>
                 </h1>
               </div>
             </div>

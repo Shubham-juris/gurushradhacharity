@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import Animated from '../assets/animated.jpg';
+import Animated from '../assets/logo/guru1.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -52,7 +52,7 @@ const Animation = () => {
             <img
               src={Animated}
               alt="Empowerment"
-              className="absolute lg:static top-0 left-0 w-full h-full lg:h-[26rem] object-cover rounded-lg"
+              className="absolute mx-auto rounded-full lg:static top-0 left-0 w-94 h-full lg:h-[26rem] object-cover"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import telephone from "../assets/telephone.jpg";
+import logo from "../assets/logo/guru1.png";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,8 @@ Our team is always ready to connect with compassionate individuals and organizat
 
 Together, let’s build a future filled with kindness, dignity, and opportunity for all.
 
-</p>
+</p>  
+<img src={logo} alt="" className="w-32 h-32 rounded-full mx-auto mt-10" />
           </div>
 
           {/* Form */}
@@ -124,7 +126,7 @@ Together, let’s build a future filled with kindness, dignity, and opportunity 
               <textarea
                 name="message"
                 required
-                rows="4"
+                rows="2"
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"

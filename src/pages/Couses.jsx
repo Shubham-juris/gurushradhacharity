@@ -1,5 +1,9 @@
 import React from "react";
-import education from "../assets/logo/education.jpg";
+import education from "../assets/logo/4.jpg";
+import { Link } from "react-router-dom";
+import educationbnr from "../assets/educationbnr.jpg";
+import hungry from "../assets/homeless.jpg";
+import earth from "../assets/earth.jpg"
 
 const blogPosts = [
   {
@@ -10,7 +14,7 @@ const blogPosts = [
       "Discover how providing access to safe water is transforming lives and promoting sustainable health in underprivileged areas.",
     image:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    link: "/water",
   },
   {
     id: 2,
@@ -18,8 +22,8 @@ const blogPosts = [
     date: "June 28, 2025",
     excerpt:
       "Education is a fundamental right. Learn about our initiatives to bring quality education to children in remote communities.",
-    image: education,
-    link: "#",
+    image: educationbnr,
+    link: "/education",
   },
   {
     id: 3,
@@ -27,9 +31,8 @@ const blogPosts = [
     date: "May 12, 2025",
     excerpt:
       "Your support helps provide nutritious meals to families facing food insecurity every day. Here’s how we’re making an impact.",
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    image: hungry,
+    link: "/hungry",
   },
   {
     id: 4,
@@ -37,9 +40,8 @@ const blogPosts = [
     date: "April 20, 2025",
     excerpt:
       "Join us in reforestation and awareness campaigns that safeguard our planet’s health for the children of tomorrow.",
-    image:
-      "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    image: earth,
+    link: "/earth",
   },
 ];
 
@@ -55,7 +57,7 @@ const Couses = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold text-center px-4">
-            Welcome to <span className="text-blue-500">Guru Charity</span> <br />
+            Welcome to <span className="text-blue-500">GuruShradha Charity</span> <br />
             Foundation
           </h1>
         </div>
@@ -65,7 +67,7 @@ const Couses = () => {
       <section className="bg-blue-600 py-12 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center mb-10">
           <h2 className="text-white text-3xl sm:text-4xl font-bold mb-4">
-            Guru Charity Foundation Courses
+            GuruShradha Charity Foundation Courses
           </h2>
           <p className="text-blue-200 text-sm sm:text-lg max-w-2xl mx-auto">
             Stories and updates from our mission to empower communities and change lives.
@@ -89,13 +91,23 @@ const Couses = () => {
                 <time className="text-sm text-blue-600 mb-1">{date}</time>
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">{title}</h3>
                 <p className="text-blue-800 text-sm flex-grow">{excerpt}</p>
-                <a
-                  href={link}
-                  className="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition"
-                  aria-label={`Read more about ${title}`}
-                >
-                  Read More →
-                </a>
+                {id === 1 ? (
+                  <Link
+                    to="/water"
+                    className="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition"
+                    aria-label={`Read more about ${title}`}
+                  >
+                    Read More →
+                  </Link>
+                ) : (
+                  <a
+                    href={link}
+                    className="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition"
+                    aria-label={`Read more about ${title}`}
+                  >
+                    Read More →
+                  </a>
+                )}
               </div>
             </article>
           ))}

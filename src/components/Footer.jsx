@@ -3,29 +3,20 @@ import fb from "../assets/logo/fb.avif";
 import insta from "../assets/logo/insta.jpg";
 import twitter from "../assets/logo/x.jpg";
 import youtube from "../assets/logo/youtube.avif";
+import logo from "../assets/logo/guru1.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-12 px-6">
+    <footer className="bg-blue-600 text-white py-12 px-6 items-center text-center">
       <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between">
         {/* Logo & Description */}
         <div className="flex-1 min-w-[250px]">
-          <h2 className="text-2xl font-bold mb-4">CHARITI</h2>
+          <img src={logo} className="w-20 h-auto mx-auto rounded-full mb-6" alt="" />
           <p className="text-sm text-gray-300 mb-4">
             Towards the end of the 19th century, with the advent of the New
             Liberalism and the innovative
           </p>
-          <div>
-            <h4 className="text-md font-semibold mb-2">Social Media Handles</h4>
-            <div className="flex gap-4 flex-wrap items-center">
-              {[{ img: fb, label: "Facebook" }, { img: insta, label: "Instagram" }, { img: twitter, label: "Twitter" }, { img: youtube, label: "YouTube" }].map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <img src={item.img} alt={item.label} className="w-10 h-10 rounded-full shadow-lg object-cover" />
-                  <span className="text-xs mt-1">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
 
         {/* Contact Info */}

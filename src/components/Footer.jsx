@@ -23,13 +23,13 @@ const Footer = () => {
         <div className="flex-1 min-w-[250px]">
           <h3 className="text-lg font-semibold uppercase mb-4">Contact Information</h3>
           <p className="text-sm text-gray-300 mb-2">
-            Box 3233<br />
-            1810 Kings Way<br />
-            King Street, 5th Avenue, New York
+            SCO 27<br />
+            New Sunny Enclave,<br />
+            Sector-125, MOHALI-140301<br/>
+            PUNJAB
           </p>
-          <p className="text-sm text-gray-300 mb-1"><strong>New York:</strong> 1800–2355–2356</p>
-          <p className="text-sm text-gray-300 mb-1"><strong>London:</strong> 020–1455–236–34</p>
-          <p className="text-sm text-gray-300">📧 contact@Chariti.theme</p>
+          <p className="text-sm text-gray-300 mb-1"><strong>Mohali:</strong> 0160-501-3008</p>
+{/*           <p className="text-sm text-gray-300"></p> */}
         </div>
 
         {/* Quick Links */}

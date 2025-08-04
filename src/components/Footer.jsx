@@ -56,11 +56,11 @@ const Footer = () => {
           <div className="w-full h-40 rounded overflow-hidden">
             <iframe
               title="GuruShradha Chariti Location"
-              src="<iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.091543112093!2d76.67381317466199!3d30.7422371851749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef00741720f5%3A0x9f5f7dfc98a60da1!2sJurisnexa%20Immigration!5e1!3m2!1sen!2sin!4v1754285317815!5m2!1sen!2sin width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.091543112093!2d76.67381317466199!3d30.7422371851749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef00741720f5%3A0x9f5f7dfc98a60da1!2sJurisnexa%20Immigration!5e1!3m2!1sen!2sin!4v1754285317815!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen
+              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

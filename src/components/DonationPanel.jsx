@@ -20,10 +20,10 @@ const DonationPanel = () => {
             Your gift brings food, shelter, education, and trauma care to children
             in war zones. To direct your donation to a specific project, email{" "}
             <a
-              href="mailto:Gurushradhacharity"
+              href="mailto:gurushardhawelfaresociety@gmail.com"
               className="text-blue-600 font-medium underline"
             >
-              Gurushradhacharity
+           gurushardhawelfaresociety@gmail.com
             </a>
             . While we honor preferences, funds may be reallocated to ensure the
             greatest impact.

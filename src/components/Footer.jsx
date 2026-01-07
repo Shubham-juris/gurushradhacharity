@@ -4,7 +4,7 @@ import insta from "../assets/logo/insta.jpg";
 import twitter from "../assets/logo/x.jpg";
 import youtube from "../assets/logo/youtube.avif";
 import logo from "../assets/logo/logo2.jpeg";
-
+  import { MapPin, Phone, Mail } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-blue-600 text-white py-12 px-6 text-center">
@@ -24,17 +24,29 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex-1 min-w-[250px]">
-          <h3 className="text-lg font-semibold uppercase mb-4">
-            Contact Information
-          </h3>
-          <p className="text-sm text-gray-300 mb-2">
-            <strong>📍</strong> Calgary, Alberta, Canada
-          </p>
-          <p className="text-sm text-gray-300">
-            <strong>📞</strong> 7087107692
-          </p>
-        </div>
+    
+
+<div className="flex-1 min-w-[250px]">
+  <h3 className="text-lg font-semibold uppercase mb-4 text-white">
+    Contact Information
+  </h3>
+
+  <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
+    <MapPin size={16} className="text-red-600" />
+    Calgary, Alberta, Canada
+  </p>
+
+  <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
+    <Phone size={16} className="text-red-600" />
+    7087107692
+  </p>
+
+  <p className="flex items-center gap-2 text-sm text-gray-300">
+    <Mail size={16} className="text-red-600" />
+    gurushardhawelfaresociety@gmail.com
+  </p>
+</div>
+
 
         {/* Quick Links */}
         <div className="flex-1 min-w-[200px]">

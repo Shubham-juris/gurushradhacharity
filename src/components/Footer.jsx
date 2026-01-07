@@ -45,6 +45,20 @@ const Footer = () => {
     <Mail size={16} className="text-red-600" />
     gurushardhawelfaresociety@gmail.com
   </p>
+   <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
+    <MapPin size={16} className="text-red-600" />
+   SCO 27 New Sunny Enclave , Sector-125, MOHALI-140301 PUNJAB
+  </p>
+
+  <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
+    <Phone size={16} className="text-red-600" />
+    0160-501-3008
+  </p>
+
+  <p className="flex items-center gap-2 text-sm text-gray-300">
+    <Mail size={16} className="text-red-600" />
+    gurushardhawelfaresociety@gmail.com
+  </p>
 </div>
 
 

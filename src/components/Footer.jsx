@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Contact Info */}
     
 
-<div className="flex-1 min-w-[250px]">
+{/* <div className="flex-1 min-w-[250px]">
   <h3 className="text-lg font-semibold uppercase mb-4 text-white">
     Contact Information
   </h3>
@@ -45,20 +45,54 @@ const Footer = () => {
     <Mail size={16} className="text-red-600" />
     gurushardhawelfaresociety@gmail.com
   </p>
-   <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
-    <MapPin size={16} className="text-red-600" />
-   SCO 27 New Sunny Enclave , Sector-125, MOHALI-140301 PUNJAB
-  </p>
+</div> */}
+<div className="flex-1 min-w-[250px]">
+  <h3 className="text-lg font-semibold uppercase mb-4 text-white">
+    Contact Information
+  </h3>
 
-  <p className="flex items-center gap-2 text-sm text-gray-300 mb-2">
-    <Phone size={16} className="text-red-600" />
-    0160-501-3008
-  </p>
+  {/* Canada Office */}
+  <div className="space-y-2">
+    <p className="flex items-start gap-2 text-sm text-gray-300">
+      <MapPin size={16} className="text-red-600 mt-1" />
+      <span>Calgary, Alberta, Canada</span>
+    </p>
 
-  <p className="flex items-center gap-2 text-sm text-gray-300">
-    <Mail size={16} className="text-red-600" />
-    gurushardhawelfaresociety@gmail.com
-  </p>
+    <p className="flex items-center gap-2 text-sm text-gray-300">
+      <Phone size={16} className="text-red-600" />
+      <span>708-710-7692</span>
+    </p>
+
+    <p className="flex items-center gap-2 text-sm text-gray-300">
+      <Mail size={16} className="text-red-600" />
+      <span>gurushardhawelfaresociety@gmail.com</span>
+    </p>
+  </div>
+
+  {/* Divider */}
+  <div className="my-4 border-t border-gray-600"></div>
+
+  {/* India Office */}
+  <div className="space-y-2">
+    <p className="flex items-start gap-2 text-sm text-gray-300">
+      <MapPin size={16} className="text-red-600 mt-1" />
+      <span>
+        SCO 27, New Sunny Enclave,<br />
+        Sector 125, Mohali – 140301,<br />
+        Punjab, India
+      </span>
+    </p>
+
+    <p className="flex items-center gap-2 text-sm text-gray-300">
+      <Phone size={16} className="text-red-600" />
+      <span>0160-501-3008</span>
+    </p>
+
+    <p className="flex items-center gap-2 text-sm text-gray-300">
+      <Mail size={16} className="text-red-600" />
+      <span>gurushardhawelfaresociety@gmail.com</span>
+    </p>
+  </div>
 </div>
 
 

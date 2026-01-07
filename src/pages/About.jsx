@@ -50,7 +50,7 @@ const AboutUs = () => {
           ref={headingRef}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 mb-1 mt-4"
         >
-          About Us
+          About Us a
         </h1>
         <p
           ref={paragraphRef}

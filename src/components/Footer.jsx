@@ -60,7 +60,7 @@ const Footer = () => {
 
     <p className="flex items-center gap-2 text-sm text-gray-300">
       <Phone size={16} className="text-red-600" />
-      <span>708-710-7692</span>
+      <span>306-479-0100</span>
     </p>
 
     <p className="flex items-center gap-2 text-sm text-gray-300">

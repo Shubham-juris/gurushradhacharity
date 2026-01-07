@@ -60,10 +60,11 @@ const AboutUs = () => {
           <span className="font-semibold text-blue-700">
             GuruShradha Charity
           </span>{" "}
-          is to create lasting impact in the lives of those who need it most. We
-          support initiatives that provide food for the homeless, clean water
-          for communities, and education for underprivileged children. Every
-          donation you make fuels real change.
+          is to create meaningful and lasting impact in communities across the
+          world. We focus on initiatives that provide food to those in need,
+          access to clean drinking water, quality education for children, and
+          support for vulnerable families. Every contribution helps us build a
+          more compassionate and sustainable future.
         </p>
       </div>
 

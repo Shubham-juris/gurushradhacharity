@@ -7,14 +7,15 @@ import logo from "../assets/logo/logo2.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-12 px-6 items-center text-center">
+    <footer className="bg-blue-600 text-white py-12 px-6 text-center">
       <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between">
+
         {/* Logo & Description */}
         <div className="flex-1 min-w-[250px]">
           <img
             src={logo}
             className="w-20 h-auto mx-auto rounded-full mb-6"
-            alt=""
+            alt="Logo"
           />
           <p className="text-sm text-gray-300 mb-4">
             Towards the end of the 19th century, with the advent of the New
@@ -28,22 +29,21 @@ const Footer = () => {
             Contact Information
           </h3>
           <p className="text-sm text-gray-300 mb-2">
-            <strong>📍</strong> Calgary, Alberta,
+            <strong>📍</strong> Calgary, Alberta, Canada
           </p>
-          <p className="text-sm text-gray-300 mb-1">
+          <p className="text-sm text-gray-300">
             <strong>📞</strong> 7087107692
           </p>
-    
         </div>
 
         {/* Quick Links */}
-        <div className="flex-1 min-w-[200px] text-center">
+        <div className="flex-1 min-w-[200px]">
           <h3 className="text-lg font-semibold uppercase mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             {[
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
-              { label: "Courses", href: "/courses" },
+              { label: "Courses", href: "/couses" },
               { label: "Contact", href: "/contact" },
               { label: "FAQ", href: "/faq" },
             ].map((link, index) => (
@@ -57,17 +57,20 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Map Embed */}
-        <iframe
-          title="Calgary, Alberta Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40192.97340120952!2d-114.135493!3d51.044733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f82d6c5bdb7%3A0x88c0fca7c3db6d2c!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sin!4v1700000000000"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        {/* Map Section */}
+        <div className="flex-1 min-w-[250px]">
+          <h3 className="text-lg font-semibold uppercase mb-4">Our Location</h3>
+          <div className="w-full h-40 rounded overflow-hidden">
+            <iframe
+              title="Calgary, Alberta Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40192.97340120952!2d-114.135493!3d51.044733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f82d6c5bdb7%3A0x88c0fca7c3db6d2c!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sin!4v1700000000000"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
       </div>
     </footer>
   );

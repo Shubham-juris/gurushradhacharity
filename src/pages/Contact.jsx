@@ -57,14 +57,21 @@ ${formData.message}`
               Get in Touch with GuruShradha Charity
             </h3>
             <p className="mt-4 text-sm sm:text-base text-gray-700">
-             We’d love to hear from you! Whether you have a question about our mission, want to collaborate, need more details about our initiatives, or simply want to say hello — we’re here for it.
-
-Our team is always ready to connect with compassionate individuals and organizations looking to make a real difference. Whether you're a donor, volunteer, or advocate, your voice matters. Fill out the form below, and we’ll respond as quickly as possible.
-
-Together, let’s build a future filled with kindness, dignity, and opportunity for all.
-
-</p>  
-<img src={logo} alt="" className="w-32 h-32 rounded-full mx-auto mt-10" />
+              We’d love to hear from you! Whether you have a question about our
+              mission, want to collaborate, need more details about our
+              initiatives, or simply want to say hello — we’re here for it. Our
+              team is always ready to connect with compassionate individuals and
+              organizations looking to make a real difference. Whether you're a
+              donor, volunteer, or advocate, your voice matters. Fill out the
+              form below, and we’ll respond as quickly as possible. Together,
+              let’s build a future filled with kindness, dignity, and
+              opportunity for all.
+            </p>
+            <img
+              src={logo}
+              alt=""
+              className="w-32 h-32 rounded-full mx-auto mt-10"
+            />
           </div>
 
           {/* Form */}
@@ -84,7 +91,7 @@ Together, let’s build a future filled with kindness, dignity, and opportunity 
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Your Name"
+                  placeholder=""
                 />
               </div>
 
@@ -99,7 +106,7 @@ Together, let’s build a future filled with kindness, dignity, and opportunity 
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="your@email.com"
+                  placeholder=""
                 />
               </div>
             </div>
@@ -115,7 +122,7 @@ Together, let’s build a future filled with kindness, dignity, and opportunity 
                 value={formData.contact}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                placeholder="+91 9876543210"
+                placeholder=""
               />
             </div>
 
@@ -130,7 +137,7 @@ Together, let’s build a future filled with kindness, dignity, and opportunity 
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                placeholder="Write your message here..."
+                placeholder=""
               ></textarea>
             </div>
 

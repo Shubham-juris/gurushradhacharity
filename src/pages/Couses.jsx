@@ -35,17 +35,8 @@ const blogPosts = [
     image: hungry,
     link: "/hungry",
   },
-  {
-    id: 4,
-    title: "Protecting Our Environment for Future Generations",
-    date: "April 20, 2025",
-    excerpt:
-      "Join us in reforestation and awareness campaigns that safeguard our planet’s health for the children of tomorrow.",
-    image: earth,
-    link: "/earth",
-  },
-  {
-  id: 5,
+   {
+  id: 4,
   title: "Youth Support Programs",
   date: "August 10, 2025",
   excerpt:
@@ -53,6 +44,16 @@ const blogPosts = [
   image: youth,
   link: "/youth-support",
 },
+  {
+    id: 5,
+    title: "Protecting Our Environment for Future Generations",
+    date: "April 20, 2025",
+    excerpt:
+      "Join us in reforestation and awareness campaigns that safeguard our planet’s health for the children of tomorrow.",
+    image: earth,
+    link: "/earth",
+  },
+ 
 
 ];
 

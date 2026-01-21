@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import youthBanner from "../assets/Youth Support Programs.jpg"; // same style banner
+import youthBanner from "../assets/Youth Support Programs.jpg";
 import logo from "../assets/logo/guru1.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,118 +7,163 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const YouthSupport = () => {
-  const paragraphRef = useRef(null);
+  const quoteRef = useRef(null);
 
   useEffect(() => {
-    const words = paragraphRef.current.querySelectorAll(".word");
+    const words = quoteRef.current.querySelectorAll(".word");
 
     gsap.fromTo(
       words,
-      { y: 30, opacity: 0 },
+      { y: 40, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.08,
-        duration: 0.8,
+        stagger: 0.07,
+        duration: 0.9,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: paragraphRef.current,
-          start: "top 80%",
+          trigger: quoteRef.current,
+          start: "top 85%",
         },
-      }
+      },
     );
   }, []);
 
-  const text =
-    "Empowering youth with skills, mentorship, and opportunities to build confident and independent futures.";
+  const quoteText =
+    "Empowering youth today to build confident, independent, and meaningful futures tomorrow.";
 
-  const words = text.split(" ").map((word, i) => (
-    <span key={i} className="word inline-block mr-1 opacity-0">
+  const quoteWords = quoteText.split(" ").map((word, i) => (
+    <span key={i} className="word inline-block mr-2 opacity-0">
       {word}
     </span>
   ));
 
   return (
     <>
-      {/* Banner */}
+      {/* ================= Banner ================= */}
       <section>
         <img
           src={youthBanner}
-          alt="Youth Support Banner"
-          className="w-full h-48 sm:h-64 mt-16 md:h-80 lg:h-96 object-cover shadow-lg"
-          style={{ maxHeight: "50vh" }}
+          alt="Youth Support Program Banner"
+          className="w-full h-56 sm:h-72 md:h-96 object-cover mt-16 shadow-lg"
         />
       </section>
 
-      {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch w-full max-w-7xl mx-auto px-10 gap-8 text-lg md:text-xl lg:text-2xl">
-        
-        {/* Left Box */}
-        <div className="bg-white bg-opacity-80 rounded-lg p-6 shadow-lg w-full lg:w-[40%] text-center lg:text-left flex flex-col justify-center animate-fade-in-up">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
+      {/* ================= Intro Section ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+        {/* Text */}
+        <div className="lg:col-span-2 space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-800">
             Youth Support Programs
           </h1>
-          <p className="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4">
-            GuruShradha Charity Foundation is committed to supporting young
-            individuals through guidance, mentorship, skill development, and
-            community engagement. Our Youth Support Programs focus on helping
-            youth overcome challenges, discover their strengths, and build
-            meaningful pathways toward education, employment, and leadership.
-          </p>
-        </div>
 
-        {/* Right Text */}
-        <div className="w-full lg:w-[40%] flex flex-col justify-center animate-fade-in-down">
-          <p className="text-black text-base sm:text-lg md:text-xl leading-relaxed">
-            <span className="text-blue-600 font-bold">
-              Inspired by community-based youth initiatives,
-            </span>{" "}
-            our programs provide personalized support, career guidance,
-            life-skills training, and access to resources that empower youth to
-            thrive. By investing in young people today, we help create stronger,
-            healthier, and more resilient communities for tomorrow.
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            GuruShradha Charity Foundation is dedicated to empowering young
+            individuals—especially those from underprivileged and marginalized
+            communities—through structured guidance, mentorship, skill
+            development, and community engagement.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            Our Youth Support Programs aim to help young people overcome social,
+            emotional, and economic challenges while discovering their
+            strengths, building confidence, and creating meaningful pathways
+            toward education, employment, leadership, and self-reliance.
           </p>
         </div>
 
         {/* Logo */}
-        <div className="w-full lg:w-[20%] flex flex-col justify-center animate-fade-in-down">
+        <div className="flex justify-center">
           <img
             src={logo}
-            alt="GuruShradha Logo"
-            className="rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover shadow-lg mx-auto"
+            alt="GuruShradha Charity Logo"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-full shadow-xl object-cover"
           />
         </div>
-      </div>
+      </section>
 
-      {/* Animated Quote */}
-      <div className="p-6 mx-auto text-center mt-10">
+      {/* ================= What We Offer ================= */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-14">
+            What Our Youth Support Program Offers
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:scale-105 transition">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
+                Social Connection
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Safe spaces for youth to connect, share experiences, build
+                friendships, express emotions, and feel supported within the
+                community.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:scale-105 transition">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
+                Personal & Career Guidance
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                One-on-one mentorship, goal setting, career counseling, and
+                skill development to help youth plan a stable and successful
+                future.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:scale-105 transition">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
+                Advocacy Support
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Guidance to understand rights, raise voices, access services,
+                and navigate systems related to education, employment, and
+                social welfare.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:scale-105 transition">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
+                Resource Navigation
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Support in identifying needs, accessing government schemes,
+                training programs, health services, and community resources.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= Impact Section ================= */}
+      <section className="py-20 max-w-6xl mx-auto px-6 md:px-12 text-center space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-800">
+          Our Impact & Vision
+        </h2>
+
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Through consistent support, trust-based mentorship, and community
+          involvement, GuruShradha Charity Foundation strives to nurture a
+          generation of confident, responsible, and independent young leaders.
+          Our long-term vision is to strengthen communities by investing in
+          youth, enabling them to become positive contributors to society.
+        </p>
+      </section>
+
+      {/* ================= Animated Quote ================= */}
+      <section className="bg-blue-50 py-20">
         <h3
-          ref={paragraphRef}
-          className="p-10 text-blue-600 font-bold text-5xl md:text-6xl"
+          ref={quoteRef}
+          className="text-center text-blue-700 font-bold text-4xl md:text-5xl px-6"
         >
-          {words}
+          {quoteWords}
         </h3>
-      </div>
-
-      {/* Animations */}
-      <style>
-        {`
-          @keyframes fade-in-up {
-            0% { opacity: 0; transform: translateY(40px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes fade-in-down {
-            0% { opacity: 0; transform: translateY(-40px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-          .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease both;
-          }
-          .animate-fade-in-down {
-            animation: fade-in-down 0.8s ease both;
-          }
-        `}
-      </style>
+      </section>
     </>
   );
 };

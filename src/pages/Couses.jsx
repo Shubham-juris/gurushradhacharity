@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import educationbnr from "../assets/educationbnr.jpg";
 import hungry from "../assets/homeless.jpg";
 import earth from "../assets/earth.jpg"
+import youth from "../assets/Youth Support Programs.jpg";
 
 const blogPosts = [
   {
@@ -43,6 +44,16 @@ const blogPosts = [
     image: earth,
     link: "/earth",
   },
+  {
+  id: 5,
+  title: "Youth Support Programs",
+  date: "August 10, 2025",
+  excerpt:
+    "Our Youth Support Programs empower young individuals through mentorship, skill development, career guidance, and community engagement to build confident and independent futures.",
+  image: youth,
+  link: "/youth-support",
+},
+
 ];
 
 const Couses = () => {
@@ -58,7 +69,7 @@ const Couses = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold text-center px-4">
             Welcome to <span className="text-blue-500">GuruShradha Charity</span> <br />
-            Foundation
+            Foundation 
           </h1>
         </div>
       </div>
@@ -113,6 +124,8 @@ const Couses = () => {
           ))}
         </div>
       </section>
+
+      
     </>
   );
 };

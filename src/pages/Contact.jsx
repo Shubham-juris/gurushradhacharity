@@ -65,7 +65,7 @@ ${formData.message}`
               donor, volunteer, or advocate, your voice matters. Fill out the
               form below, and we’ll respond as quickly as possible. Together,
               let’s build a future filled with kindness, dignity, and
-              opportunity for all.
+              opportunity for al.
             </p>
             <img
               src={logo}
